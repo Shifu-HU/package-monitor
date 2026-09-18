@@ -37,7 +37,8 @@ A prebuilt APK ships in the repo root: [`PackageMonitor.apk`](PackageMonitor.apk
 Requires Flutter 3.24.x (Dart 3.5.x) and Android SDK 34:
 
 ```bash
-cd flutter_app
+git clone https://github.com/Shifu-HU/package-monitor.git
+cd package-monitor/flutter_app
 flutter config --android-sdk <path-to-your-sdk>   # prevents local.properties from being overwritten
 flutter pub get
 flutter build apk --release
@@ -155,6 +156,8 @@ package-monitor/
 Requires Python 3.10+:
 
 ```bat
+git clone https://github.com/Shifu-HU/package-monitor.git
+cd package-monitor
 pip install -r requirements.txt
 python main.py --simulate   # demo mode, no account needed
 python main.py              # pick a provider on the login window
