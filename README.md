@@ -107,7 +107,7 @@ Query courier logistics by tracking number through **API providers**, refresh au
 ## Repository layout (desktop part)
 
 ```
-cainiao-monitor/
+package-monitor/
 ├── main.py                     # Program entry
 ├── requirements.txt            # Runtime dependencies
 ├── requirements-dev.txt        # Packaging dependencies
