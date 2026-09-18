@@ -78,6 +78,16 @@ flutter_app/lib/
 
 通过 **API 服务商**按运单号查询快递物流，定时自动刷新，物流有新动态时**系统托盘弹通知**。界面无广告，所有数据只保存在本机。
 
+## 下载（Windows）
+
+从 [**Releases**](https://github.com/Shifu-HU/package-monitor/releases/latest) 下载独立版：
+
+**[`PackageMonitor.exe`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.exe)**（约 210 MB）—— 单文件，双击即用。**无需 Python、无需安装、无任何依赖。**
+
+- 完整版，内置浏览器（QtWebEngine），支持在软件内直接登录菜鸟账号；
+- 首次运行可能被 Windows SmartScreen 拦截（未签名）→ 点「更多信息」→「仍要运行」；
+- **不含任何个人凭证**，首次启动请填入你自己的 API 凭证。
+
 ## 功能特性（桌面版）
 
 - **数据服务商（登录页四选一）**
