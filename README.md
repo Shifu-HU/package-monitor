@@ -9,6 +9,8 @@ A parcel / express-delivery tracking app in two editions sharing one API provide
 
 Both editions are ad-free and keep all data on your device.
 
+**Download** — [Windows `PackageMonitor.exe`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.exe) (~210 MB) · [Android `PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk) (~21 MB), both from [Releases](https://github.com/Shifu-HU/package-monitor/releases/latest).
+
 ---
 
 # Android Edition (Flutter)
@@ -21,7 +23,12 @@ Track courier shipments on your phone: add a tracking number, query the logistic
 
 ## Download APK
 
-A prebuilt APK ships in the repo root: [`PackageMonitor.apk`](PackageMonitor.apk) (~21 MB, **contains no personal credentials** — enter your own API credentials on first launch).
+Grab the latest APK from [**Releases**](https://github.com/Shifu-HU/package-monitor/releases/latest):
+
+**[`PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk)** (~21 MB) — install it straight on your phone, **no account and no app store required**.
+
+- **Contains no personal credentials** — enter your own API credentials on first launch;
+- The same file also ships in the repo root: [`PackageMonitor.apk`](PackageMonitor.apk).
 
 ## Features (Android)
 
