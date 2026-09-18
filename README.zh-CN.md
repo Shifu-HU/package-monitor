@@ -107,7 +107,7 @@ flutter_app/lib/
 ## 目录结构
 
 ```
-cainiao-monitor/
+package-monitor/
 ├── main.py                     # 程序入口
 ├── requirements.txt            # 运行依赖
 ├── requirements-dev.txt        # 打包依赖
