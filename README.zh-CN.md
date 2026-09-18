@@ -9,6 +9,8 @@
 
 两个版本界面无广告，所有数据只保存在本机。
 
+**下载** —— [Windows `PackageMonitor.exe`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.exe)（约 210 MB）· [Android `PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk)（约 21 MB），均在 [Releases](https://github.com/Shifu-HU/package-monitor/releases/latest) 页面。
+
 ---
 
 # Android 版（Flutter）
@@ -21,7 +23,12 @@
 
 ## 下载 APK
 
-仓库根目录提供预构建 APK：[`PackageMonitor.apk`](PackageMonitor.apk)（约 21 MB，**不含任何个人凭证**，安装后首次启动自行填入自己的 API 凭证即可）。
+从 [**Releases**](https://github.com/Shifu-HU/package-monitor/releases/latest) 下载最新版 APK：
+
+**[`PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk)**（约 21 MB）——直接装到手机上，**免账号、免应用商店**。
+
+- **不含任何个人凭证**，安装后首次启动自行填入自己的 API 凭证即可；
+- 同一文件也在仓库根目录：[`PackageMonitor.apk`](PackageMonitor.apk)。
 
 ## Android 版功能特性
 
