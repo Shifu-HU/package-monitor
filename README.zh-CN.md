@@ -37,7 +37,8 @@
 需要 Flutter 3.24.x（Dart 3.5.x）与 Android SDK 34：
 
 ```bash
-cd flutter_app
+git clone https://github.com/Shifu-HU/package-monitor.git
+cd package-monitor/flutter_app
 flutter config --android-sdk <你的SDK路径>   # 防止 local.properties 被覆写
 flutter pub get
 flutter build apk --release
@@ -155,6 +156,8 @@ package-monitor/
 需要 Python 3.10+：
 
 ```bat
+git clone https://github.com/Shifu-HU/package-monitor.git
+cd package-monitor
 pip install -r requirements.txt
 python main.py --simulate   # 模拟模式体验（无需账号）
 python main.py              # 登录页选择服务商
