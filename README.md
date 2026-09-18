@@ -78,6 +78,16 @@ flutter_app/lib/
 
 Query courier logistics by tracking number through **API providers**, refresh automatically on a schedule, and get **system-tray notifications** when something new happens. Ad-free; all data stays on your machine.
 
+## Download (Windows)
+
+Grab the standalone build from [**Releases**](https://github.com/Shifu-HU/package-monitor/releases/latest):
+
+**[`PackageMonitor.exe`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.exe)** (~210 MB) — single file, double-click to run. **No Python, no installation, no dependencies.**
+
+- Full edition with an embedded browser (QtWebEngine) for in-app Cainiao login;
+- On first launch Windows may show a SmartScreen warning (unsigned build) → *More info* → *Run anyway*;
+- **Contains no personal credentials** — enter your own API credentials on first launch.
+
 ## Features (Desktop)
 
 - **Data providers (choose one on the login window)**

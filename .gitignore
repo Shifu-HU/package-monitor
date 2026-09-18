@@ -3,9 +3,13 @@ __pycache__/
 build/
 build_lite/
 build_full/
+build_onefile/
+build_onefile_lite/
 dist/
 dist_lite/
 dist_full/
+dist_onefile/
+dist_onefile_lite/
 tests/_tmp/
 tests/_shots/
 *.spec.bak
