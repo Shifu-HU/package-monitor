@@ -11,6 +11,8 @@ Both editions are ad-free and keep all data on your device.
 
 **Download** — [Windows `PackageMonitor.exe`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.exe) (~210 MB) · [Android `PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk) (~21 MB), both from [Releases](https://github.com/Shifu-HU/package-monitor/releases/latest).
 
+**Architecture** — [two-edition architecture](docs/architecture.html) · [repo consolidation workflow](docs/git-ops.html): interactive, self-contained HTML.
+
 ---
 
 # Android Edition (Flutter)

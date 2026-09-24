@@ -11,6 +11,8 @@
 
 **下载** —— [Windows `PackageMonitor.exe`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.exe)（约 210 MB）· [Android `PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk)（约 21 MB），均在 [Releases](https://github.com/Shifu-HU/package-monitor/releases/latest) 页面。
 
+**架构图** —— [双端项目架构](docs/architecture.zh-CN.html) · [仓库归集与署名统一流程](docs/git-ops.zh-CN.html)：可交互，单文件 HTML。
+
 ---
 
 # Android 版（Flutter）
