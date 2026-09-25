@@ -4,7 +4,7 @@
 
 Windows 桌面 + Android 双端快递物流追踪：添加运单号后自动保持轨迹最新，有新动态弹托盘通知。无广告、免账号，所有数据只保存在本机。
 
-**架构图** —— [双端项目架构](docs/architecture.zh-CN.html) · [仓库归集与署名统一流程](docs/git-ops.zh-CN.html)：可交互，单文件 HTML。
+**架构图** —— [双端项目架构](docs/architecture.zh-CN.html)：可交互，单文件 HTML。
 
 ## 1. 安装
 

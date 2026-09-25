@@ -4,7 +4,7 @@
 
 Parcel tracking for Windows desktop and Android: add a courier tracking number, the app keeps the logistics timeline fresh and pops a tray notification when something new happens. Ad-free, no account, all data stays on your device.
 
-**Architecture** — [two-edition architecture](docs/architecture.html) · [repo consolidation workflow](docs/git-ops.html): interactive, self-contained HTML.
+**Architecture** — [two-edition architecture](docs/architecture.html): interactive, self-contained HTML.
 
 ## 1. Install
 
