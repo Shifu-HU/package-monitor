@@ -4,7 +4,7 @@
 
 Parcel tracking for Windows desktop and Android: add a courier tracking number, the app keeps the logistics timeline fresh and pops a tray notification when something new happens. Ad-free, no account, all data stays on your device.
 
-**Architecture** — [two-edition architecture](docs/architecture.html): interactive, self-contained HTML.
+> 📐 **[Two-edition architecture diagram](docs/architecture.html)** — interactive, single-file HTML, opens in any browser, works offline. Also see the [repo workflow diagram](docs/git-ops.html).
 
 ## 1. Install
 
@@ -16,8 +16,8 @@ Download from [**Releases**](https://github.com/Shifu-HU/package-monitor/release
 | Android | [`PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk) | ~21 MB | Install directly on the phone. No app store, no account. |
 
 - The builds are **unsigned**: Windows may show a SmartScreen warning → *More info* → *Run anyway*; some browsers warn about APKs → install anyway.
-- The apps **contain no credentials** — you enter your own on first launch, or start with Demo mode.
-- Antivirus occasionally flags PyInstaller builds; add a trust rule if that happens.
+- The apps **contain no credentials** — credentials are entered on first launch, or start with Demo mode.
+- Antivirus software occasionally flags PyInstaller builds; add a trust rule if that happens.
 
 ## 2. Pick a data provider (first launch)
 

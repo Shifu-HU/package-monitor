@@ -4,7 +4,7 @@
 
 Windows 桌面 + Android 双端快递物流追踪：添加运单号后自动保持轨迹最新，有新动态弹托盘通知。无广告、免账号，所有数据只保存在本机。
 
-**架构图** —— [双端项目架构](docs/architecture.zh-CN.html)：可交互，单文件 HTML。
+> 📐 **[双端架构图](docs/architecture.zh-CN.html)** —— 可交互、单文件 HTML，浏览器直接打开，无需联网。另附[仓库运维流程图](docs/git-ops.zh-CN.html)。
 
 ## 1. 安装
 
@@ -16,8 +16,8 @@ Windows 桌面 + Android 双端快递物流追踪：添加运单号后自动保�
 | Android | [`PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk) | 约 21 MB | 直接装到手机上。免应用商店、免账号。 |
 
 - 安装包**未签名**：Windows 可能弹 SmartScreen 警告 → 「更多信息」→「仍要运行」；部分浏览器会提示 APK 风险 → 照常安装即可。
-- 应用内**不含任何凭证**——首次启动填入自己的，或先玩模拟模式。
-- 杀毒软件偶尔会误报 PyInstaller 打包的程序，加一条信任规则即可。
+- 应用内**不含任何凭证**——凭证在首次启动时填入，或先用模拟模式体验。
+- 杀毒软件偶尔会误报 PyInstaller 打包的程序，添加一条信任规则即可。
 
 ## 2. 选择数据服务商（首次启动）
 
