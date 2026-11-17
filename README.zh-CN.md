@@ -1,5 +1,9 @@
 <p align="center"><a href="README.md">English</a> | 简体中文</p>
 
+[![PyPI](https://img.shields.io/pypi/v/package-monitor.svg)](https://pypi.org/project/package-monitor/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/package-monitor.svg)](https://pypi.org/project/package-monitor/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 # 包裹监控（Package Monitor）
 
 Windows 桌面 + Android 双端快递物流追踪：添加运单号后自动保持轨迹最新，有新动态弹托盘通知。无广告、免账号，所有数据只保存在本机。
@@ -14,6 +18,15 @@ Windows 桌面 + Android 双端快递物流追踪：添加运单号后自动保�
 |---|---|---|---|
 | Windows 10/11 | [`PackageMonitor.exe`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.exe) | 约 210 MB | 单文件，双击即用。无需 Python、无需安装、无依赖。 |
 | Android | [`PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk) | 约 21 MB | 直接装到手机上。免应用商店、免账号。 |
+
+### 从 PyPI 安装（开发者）
+
+```bash
+pip install package-monitor
+package-monitor            # 或：python -m package_monitor
+```
+
+需要 Windows 10/11 + Python 3.9 以上，会顺带装上 PySide6（约 250 MB 的 Qt 依赖）。日常使用建议优先用上面的 `.exe`——单个文件、无需 Python。
 
 - 安装包**未签名**：Windows 可能弹 SmartScreen 警告 → 「更多信息」→「仍要运行」；部分浏览器会提示 APK 风险 → 照常安装即可。
 - 应用内**不含任何凭证**——凭证在首次启动时填入，或先用模拟模式体验。

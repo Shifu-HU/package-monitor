@@ -10,9 +10,9 @@ import tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from app.config import Config
-from app.models import Package, TraceNode, sort_trace_desc
-from app.api.wuliu import parse_list_html, parse_detail_html, extract_location, _looks_logged_in
+from package_monitor.config import Config
+from package_monitor.models import Package, TraceNode, sort_trace_desc
+from package_monitor.api.wuliu import parse_list_html, parse_detail_html, extract_location, _looks_logged_in
 
 
 def test_config_roundtrip():
@@ -95,7 +95,7 @@ def test_parse_list_strategy3():
 
 
 def test_parse_login_required():
-    from app.api.http_client import LoginRequired
+    from package_monitor.api.http_client import LoginRequired
     try:
         parse_list_html(LOGIN_PAGE)
         assert False, "should raise LoginRequired"
@@ -164,8 +164,8 @@ def test_kuaidi100_offline_behavior():
 
 def test_demo_data():
     """模拟数据源：不联网生成包裹；第二次刷新应有更新（驱动通知）"""
-    from app.api import demo
-    from app.api.demo import _TICK
+    from package_monitor.api import demo
+    from package_monitor.api.demo import _TICK
 
     _TICK["n"] = 0
     pkgs1 = demo.fetch_packages()
@@ -188,7 +188,7 @@ def test_demo_data():
 
 def test_demo_detail_coords():
     """模拟模式详情坐标：直接可用，无需地理编码"""
-    from app.api import demo
+    from package_monitor.api import demo
     pkg = demo.demo_package()
     coords = [tuple(c) for c in pkg.extra.get("coords", [])]
     assert len(coords) == len(pkg.trace)
@@ -198,7 +198,7 @@ def test_demo_detail_coords():
 
 def test_kdniao_sign():
     """快递鸟 DataSign 签名算法（离线验证）"""
-    from app.api.kdniao import _sign
+    from package_monitor.api.kdniao import _sign
     # 已知值验证：RequestData='{"LogisticCode":"SF123"}' AppKey='key123'
     import base64, hashlib
     data = '{"LogisticCode":"SF123"}'

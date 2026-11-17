@@ -15,8 +15,8 @@ import traceback
 from PySide6.QtCore import Qt, QDir, QLockFile, QTimer
 from PySide6.QtWidgets import QApplication, QFrame, QLabel, QMessageBox, QVBoxLayout
 
-from app.config import Config, app_data_dir
-from app.logger import get_logger
+from package_monitor.config import Config, app_data_dir
+from package_monitor.logger import get_logger
 
 log = None
 
@@ -87,7 +87,7 @@ def _log_gui_env() -> None:
 def _save_window_shot(widget, tag: str) -> None:
     """调试截图：把窗口内容保存为 PNG（用于无可见桌面的环境确认界面）"""
     try:
-        from app.config import app_data_dir
+        from package_monitor.config import app_data_dir
         d = os.path.join(app_data_dir(), "debug")
         os.makedirs(d, exist_ok=True)
         path = os.path.join(d, f"window_{tag}.png")
@@ -141,17 +141,17 @@ def main() -> int:
     app.setOrganizationName("CainiaoMonitor")
     app.setQuitOnLastWindowClosed(False)   # 关窗不退出（托盘常驻）
 
-    from app.logger import setup_logger
+    from package_monitor.logger import setup_logger
     log = setup_logger()
     log.info("== 菜鸟包裹监控启动 ==")
     _log_gui_env()
     config0 = Config()
     appr = config0.get_appearance()
-    from app.ui.theme import apply_theme, resolve_mode, scheme_colors
+    from package_monitor.ui.theme import apply_theme, resolve_mode, scheme_colors
     c1, c2, c3 = scheme_colors(appr["scheme"])   # 方案表为准，旧配色自动回退第1张
     apply_theme(app, mode=resolve_mode(appr["mode"]), accent=c1, accent2=c2, accent3=c3)
     log.info("theme applied: %s / %s", appr["mode"], appr["scheme"])
-    from app.ui.icons import make_app_icon
+    from package_monitor.ui.icons import make_app_icon
     app.setWindowIcon(make_app_icon())
     _install_excepthook(app)
     log.info("excepthook installed")
@@ -173,8 +173,8 @@ def main() -> int:
         return app.exec()
 
     # ---------- 启动流程 ----------
-    from app.ui.login_window import LoginWindow, VerifyWorker
-    from app.ui.main_window import MainWindow
+    from package_monitor.ui.login_window import LoginWindow, VerifyWorker
+    from package_monitor.ui.main_window import MainWindow
 
     main_win: MainWindow | None = None
     splash: _Splash | None = None
@@ -215,7 +215,7 @@ def main() -> int:
             main_win = MainWindow(config)
             main_win.relogin_requested.connect(handle_relogin)
             main_win.quit_requested.connect(handle_quit)
-            from app.core.notifier import TrayNotifier
+            from package_monitor.core.notifier import TrayNotifier
             tray = TrayNotifier(make_app_icon(), main_win)
             tray.show()
             main_win.set_tray(tray)
@@ -242,7 +242,7 @@ def main() -> int:
         except Exception:
             pass
         try:
-            from app.core.workers import wait_all
+            from package_monitor.core.workers import wait_all
             wait_all(8000)
         except Exception:
             pass
@@ -296,8 +296,8 @@ def main() -> int:
 
 def _run_demo(app: QApplication, config: Config) -> None:
     """演示模式：用模拟数据展示界面效果（不联网）"""
-    from app.models import Package, TraceNode
-    from app.ui.main_window import MainWindow
+    from package_monitor.models import Package, TraceNode
+    from package_monitor.ui.main_window import MainWindow
 
     now = "2025-06-08 14:32:10"
     demo = [

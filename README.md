@@ -1,5 +1,9 @@
 <p align="center">English | <a href="README.zh-CN.md">简体中文</a></p>
 
+[![PyPI](https://img.shields.io/pypi/v/package-monitor.svg)](https://pypi.org/project/package-monitor/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/package-monitor.svg)](https://pypi.org/project/package-monitor/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 # Package Monitor (包裹监控)
 
 Parcel tracking for Windows desktop and Android: add a courier tracking number, the app keeps the logistics timeline fresh and pops a tray notification when something new happens. Ad-free, no account, all data stays on your device.
@@ -14,6 +18,15 @@ Download from [**Releases**](https://github.com/Shifu-HU/package-monitor/release
 |---|---|---|---|
 | Windows 10/11 | [`PackageMonitor.exe`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.exe) | ~210 MB | Single file — double-click to run. No Python, no installation, no dependencies. |
 | Android | [`PackageMonitor.apk`](https://github.com/Shifu-HU/package-monitor/releases/latest/download/PackageMonitor.apk) | ~21 MB | Install directly on the phone. No app store, no account. |
+
+### From PyPI (developers)
+
+```bash
+pip install package-monitor
+package-monitor            # or: python -m package_monitor
+```
+
+Windows 10/11 + Python 3.9 or newer. Pulls in PySide6 (~250 MB of Qt). For everyday use, prefer the `.exe` above — one file, no Python required.
 
 - The builds are **unsigned**: Windows may show a SmartScreen warning → *More info* → *Run anyway*; some browsers warn about APKs → install anyway.
 - The apps **contain no credentials** — credentials are entered on first launch, or start with Demo mode.

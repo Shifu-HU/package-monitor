@@ -17,14 +17,14 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtWidgets import QApplication, QFrame
 
-from app.config import Config
-from app.models import Package, TraceNode
-from app.ui.theme import apply_theme
-from app.ui.icons import make_app_icon, company_badge, status_dot
-from app.ui.package_card import PackageCard
-from app.ui.main_window import MainWindow
-from app.ui.detail_dialog import DetailDialog
-from app.ui.login_window import LoginWindow
+from package_monitor.config import Config
+from package_monitor.models import Package, TraceNode
+from package_monitor.ui.theme import apply_theme
+from package_monitor.ui.icons import make_app_icon, company_badge, status_dot
+from package_monitor.ui.package_card import PackageCard
+from package_monitor.ui.main_window import MainWindow
+from package_monitor.ui.detail_dialog import DetailDialog
+from package_monitor.ui.login_window import LoginWindow
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "_shots")
@@ -82,7 +82,7 @@ shot(win, "main_window.png")
 win.close()
 
 # 3) 详情弹窗（模拟模式：直接渲染演示数据，不联网、不弹窗）
-from app.api import demo as demo_api
+from package_monitor.api import demo as demo_api
 cfg_demo0 = Config(os.path.join(OUT, "smoke_demo0.json"))
 cfg_demo0.set_demo(True)
 pkg = demo_api.demo_package()
@@ -109,7 +109,7 @@ win2.close()
 
 
 # 7) 模拟模式完整管线：MonitorWorker(模拟数据) → packages_ready → 刷新 → updates_detected
-from app.core.monitor import MonitorWorker
+from package_monitor.core.monitor import MonitorWorker
 from PySide6.QtCore import QEventLoop, QTimer
 
 cfg_demo = Config(os.path.join(OUT, "smoke_demo.json"))
@@ -153,7 +153,7 @@ worker.wait(3000)
 print("SIMULATION PIPELINE OK: packages=%d updates=%d" % (len(received[0]), len(updates)))
 
 # 8) 模拟模式详情弹窗（直接用演示数据，不联网）
-from app.api import demo as demo_api
+from package_monitor.api import demo as demo_api
 pkg = demo_api.demo_package()
 cfg_demo.set_demo(True)
 dlg2 = DetailDialog(pkg, cfg_demo)
