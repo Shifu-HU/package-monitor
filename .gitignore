@@ -13,3 +13,6 @@ dist_onefile_lite/
 tests/_tmp/
 tests/_shots/
 *.spec.bak
+
+# 构建产物
+*.egg-info/
